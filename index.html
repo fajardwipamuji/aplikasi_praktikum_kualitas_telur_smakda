@@ -74,15 +74,17 @@
 
     <!-- ==================== HEADER ==================== -->
     <header class="bg-green-700 text-white shadow-md sticky top-0 z-40">
-        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="max-w-5xl mx-auto px-4 py-3 md:py-4 flex justify-between items-center">
             <!-- Logo dan Judul Aplikasi -->
             <div class="flex items-center gap-3">
-                <div class="bg-white text-green-700 p-2 rounded-lg">
+                <div class="bg-white text-green-700 p-2 rounded-lg hidden sm:block">
                     <i class="fas fa-tractor text-2xl"></i>
                 </div>
                 <div>
-                    <h1 class="text-xl font-bold tracking-wide">AgriEdu Pro</h1>
-                    <p class="text-xs text-green-200">Laboratorium Virtual Agribisnis Ternak</p>
+                    <h1 class="text-lg md:text-xl font-bold tracking-wide flex items-center gap-2">
+                        <i class="fas fa-tractor sm:hidden"></i> AgriEdu Pro
+                    </h1>
+                    <p class="text-[10px] md:text-xs text-green-200">Laboratorium Virtual Agribisnis Ternak</p>
                 </div>
             </div>
             <!-- Identitas Sekolah -->
@@ -93,51 +95,54 @@
             </div>
         </div>
         
-        <!-- Tab Navigation (3 Menu) -->
-        <div class="flex justify-center bg-green-800 px-2 sm:px-4 shadow-inner overflow-x-auto">
+        <!-- Tab Navigation (3 Menu) - Dioptimalkan untuk Mobile -->
+        <div class="flex justify-between bg-green-800 px-1 sm:px-4 shadow-inner border-t border-green-600">
             <button 
                 onclick="switchTab('materi')" 
                 id="tab-materi" 
-                class="flex-1 min-w-[140px] py-3 md:py-4 text-center font-bold text-green-100 hover:text-white border-b-4 border-transparent transition-all duration-300 whitespace-nowrap px-2">
-                <i class="fas fa-book-open mr-2"></i>Materi Pembelajaran
+                class="flex-1 py-2 sm:py-4 text-center font-bold text-green-100 hover:text-white border-b-4 border-transparent transition-all duration-300 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-[10px] sm:text-sm">
+                <i class="fas fa-book-open text-base sm:text-lg"></i>
+                <span class="leading-tight">Materi Pembelajaran</span>
             </button>
             <button 
                 onclick="switchTab('carakerja')" 
                 id="tab-carakerja" 
-                class="flex-1 min-w-[140px] py-3 md:py-4 text-center font-bold text-green-100 hover:text-white border-b-4 border-transparent transition-all duration-300 whitespace-nowrap px-2">
-                <i class="fas fa-list-ol mr-2"></i>Cara Kerja Praktikum
+                class="flex-1 py-2 sm:py-4 text-center font-bold text-green-100 hover:text-white border-b-4 border-transparent transition-all duration-300 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-[10px] sm:text-sm border-l border-r border-green-700 sm:border-none">
+                <i class="fas fa-list-ol text-base sm:text-lg"></i>
+                <span class="leading-tight">Cara Kerja Praktikum</span>
             </button>
             <button 
                 onclick="switchTab('praktik')" 
                 id="tab-praktik" 
-                class="flex-1 min-w-[140px] py-3 md:py-4 text-center font-bold text-green-100 hover:text-white border-b-4 border-transparent transition-all duration-300 whitespace-nowrap px-2">
-                <i class="fas fa-flask mr-2"></i>Praktik & Laporan
+                class="flex-1 py-2 sm:py-4 text-center font-bold text-green-100 hover:text-white border-b-4 border-transparent transition-all duration-300 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-[10px] sm:text-sm">
+                <i class="fas fa-flask text-base sm:text-lg"></i>
+                <span class="leading-tight">Praktik & Laporan</span>
             </button>
         </div>
     </header>
 
     <!-- ==================== KONTEN UTAMA ==================== -->
-    <main class="max-w-5xl mx-auto px-4 py-8 flex-grow w-full">
+    <main class="max-w-5xl mx-auto px-4 py-6 md:py-8 flex-grow w-full">
         
         <!-- ---------------- TAB 1: MATERI ---------------- -->
         <section id="materi" class="tab-content">
             <div class="mb-8 border-b-2 border-green-200 pb-4">
-                <h2 class="text-3xl font-extrabold text-green-800 mb-3">Modul Praktik: Kualitas Fisik Telur</h2>
-                <p class="text-gray-700 text-lg leading-relaxed">
+                <h2 class="text-2xl md:text-3xl font-extrabold text-green-800 mb-3">Modul Praktik: Kualitas Fisik Telur</h2>
+                <p class="text-gray-700 text-base md:text-lg leading-relaxed">
                     Halo teman-teman! Selamat datang di modul interaktif kita. Sebelum kita mulai praktik membedah dan mengukur telur di laboratorium, yuk kita pahami dulu konsep dan teori serunya di bawah ini.
                 </p>
             </div>
 
             <!-- Konten Teori 1 -->
             <div class="bg-white rounded-2xl shadow-sm border border-green-100 p-6 md:p-8 mb-6 hover:shadow-md transition-shadow">
-                <h3 class="text-xl font-bold text-green-700 mb-4 flex items-center">
-                    <span class="bg-green-100 text-green-700 w-10 h-10 rounded-full flex items-center justify-center mr-4 text-lg">1</span>
+                <h3 class="text-lg md:text-xl font-bold text-green-700 mb-4 flex items-center">
+                    <span class="bg-green-100 text-green-700 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center mr-3 md:mr-4 text-base md:text-lg shrink-0">1</span>
                     Telur Itu Sel Hewan Lho!
                 </h3>
-                <p class="mb-4 text-gray-700 leading-relaxed">
+                <p class="mb-4 text-gray-700 leading-relaxed text-sm md:text-base">
                     Teman-teman tahu tidak? Sebutir telur yang biasa kita makan sebenarnya adalah sebuah sel hewan raksasa yang bisa dilihat tanpa mikroskop. Mari kita lihat ciri-cirinya secara ilmiah:
                 </p>
-                <ul class="list-disc pl-6 space-y-3 text-gray-700 leading-relaxed marker:text-green-500">
+                <ul class="list-disc pl-6 space-y-3 text-gray-700 leading-relaxed marker:text-green-500 text-sm md:text-base">
                     <li>
                         <strong>Organel Optik (Kuning Telur):</strong> Bagian inti yang kita lihat sebagai kuning telur (yolk) adalah pusat sel. Di sinilah tempat menyimpan cadangan makanan dan nutrisi yang sangat kaya untuk perkembangan embrio.
                     </li>
@@ -152,14 +157,14 @@
 
             <!-- Konten Teori 2 -->
             <div class="bg-white rounded-2xl shadow-sm border border-green-100 p-6 md:p-8 mb-6 hover:shadow-md transition-shadow">
-                <h3 class="text-xl font-bold text-green-700 mb-4 flex items-center">
-                    <span class="bg-green-100 text-green-700 w-10 h-10 rounded-full flex items-center justify-center mr-4 text-lg">2</span>
+                <h3 class="text-lg md:text-xl font-bold text-green-700 mb-4 flex items-center">
+                    <span class="bg-green-100 text-green-700 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center mr-3 md:mr-4 text-base md:text-lg shrink-0">2</span>
                     Menghitung Indeks Kuning & Putih Telur
                 </h3>
-                <p class="mb-4 text-gray-700 leading-relaxed">
+                <p class="mb-4 text-gray-700 leading-relaxed text-sm md:text-base">
                     Bagaimana cara kita tahu apakah telur masih segar atau sudah encer? Kita bisa menggunakan perhitungan indeks setelah telur dipecahkan di atas kaca preparat atau piring!
                 </p>
-                <ul class="list-disc pl-6 space-y-3 text-gray-700 leading-relaxed marker:text-green-500">
+                <ul class="list-disc pl-6 space-y-3 text-gray-700 leading-relaxed marker:text-green-500 text-sm md:text-base">
                     <li>
                         <strong>Indeks Kuning Telur (IK):</strong> Dihitung dengan cara membagi <em>tinggi kuning telur</em> dengan <em>diameternya</em>. Telur yang sangat segar bentuk kuningnya akan membulat tegak (cembung ke atas), sehingga nilai indeksnya tinggi.
                     </li>
@@ -171,19 +176,19 @@
 
             <!-- Konten Teori 3 -->
             <div class="bg-white rounded-2xl shadow-sm border border-green-100 p-6 md:p-8 mb-6 hover:shadow-md transition-shadow">
-                <h3 class="text-xl font-bold text-green-700 mb-4 flex items-center">
-                    <span class="bg-green-100 text-green-700 w-10 h-10 rounded-full flex items-center justify-center mr-4 text-lg">3</span>
+                <h3 class="text-lg md:text-xl font-bold text-green-700 mb-4 flex items-center">
+                    <span class="bg-green-100 text-green-700 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center mr-3 md:mr-4 text-base md:text-lg shrink-0">3</span>
                     Mengenal Haugh Unit (HU)
                 </h3>
-                <p class="mb-4 text-gray-700 leading-relaxed">
+                <p class="mb-4 text-gray-700 leading-relaxed text-sm md:text-base">
                     Haugh Unit (HU) adalah standar emas internasional yang digunakan oleh para ahli peternakan untuk menilai kualitas putih telur. Rumus matematikanya menggunakan kombinasi dari <em>berat telur utuh</em> dan <em>tinggi putih telur tebal</em>.
                 </p>
                 <div class="bg-green-50 p-4 rounded-lg mb-4 border border-green-200">
-                    <p class="text-sm font-mono text-green-800 text-center">
+                    <p class="text-xs md:text-sm font-mono text-green-800 text-center">
                         Rumus HU = 100 * log( Tinggi Putih Telur + 7.57 - 1.7 * Berat^0.37 )
                     </p>
                 </div>
-                <ul class="list-disc pl-6 space-y-3 text-gray-700 leading-relaxed marker:text-green-500">
+                <ul class="list-disc pl-6 space-y-3 text-gray-700 leading-relaxed marker:text-green-500 text-sm md:text-base">
                     <li><strong>Grade AA (Sangat Baik):</strong> Skor HU 72 ke atas. Putih telur sangat kental dan tinggi.</li>
                     <li><strong>Grade A (Baik):</strong> Skor HU antara 60 - 72. Kualitas standar yang aman dan sangat bagus.</li>
                     <li><strong>Grade B (Cukup):</strong> Skor HU antara 31 - 59. Putih telur mulai encer dan menyebar.</li>
@@ -195,35 +200,35 @@
         <!-- ---------------- TAB 2: CARA KERJA PRAKTIKUM ---------------- -->
         <section id="carakerja" class="tab-content">
             <div class="mb-8 border-b-2 border-green-200 pb-4">
-                <h2 class="text-3xl font-extrabold text-green-800 mb-3">Cara Kerja Praktikum</h2>
-                <p class="text-gray-700 text-lg leading-relaxed">
+                <h2 class="text-2xl md:text-3xl font-extrabold text-green-800 mb-3">Cara Kerja Praktikum</h2>
+                <p class="text-gray-700 text-base md:text-lg leading-relaxed">
                     Teman-teman, ikuti instruksi di bawah ini secara berurutan agar pengambilan data pengujian telur berjalan lancar dan akurat. Baca dengan teliti ya!
                 </p>
             </div>
 
             <!-- Langkah-langkah Praktikum -->
-            <div class="space-y-6 mb-10">
-                <div class="flex items-start gap-4 bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
-                    <div class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0 mt-1">1</div>
+            <div class="space-y-4 md:space-y-6 mb-10 text-sm md:text-base">
+                <div class="flex items-start gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <div class="bg-green-600 text-white w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold shrink-0 mt-1">1</div>
                     <div>
-                        <h4 class="font-bold text-lg text-gray-800 mb-2">Persiapan Sampel</h4>
+                        <h4 class="font-bold text-base md:text-lg text-gray-800 mb-2">Persiapan Sampel</h4>
                         <p class="text-gray-600">Setiap kelompok wajib menyiapkan masing-masing <strong>2 butir telur mentah</strong> untuk setiap jenis: Telur Bebek, Telur Ayam Ras, Telur Ayam Kampung, dan Telur Puyuh (Total 8 telur). Beri label pada setiap telur menggunakan spidol/selotip kertas dengan tanda <strong>Telur A</strong> dan <strong>Telur B</strong> untuk setiap jenis.</p>
                     </div>
                 </div>
 
-                <div class="flex items-start gap-4 bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
-                    <div class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0 mt-1">2</div>
+                <div class="flex items-start gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <div class="bg-green-600 text-white w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold shrink-0 mt-1">2</div>
                     <div>
-                        <h4 class="font-bold text-lg text-gray-800 mb-2">Penimbangan Utuh</h4>
+                        <h4 class="font-bold text-base md:text-lg text-gray-800 mb-2">Penimbangan Utuh</h4>
                         <p class="text-gray-600">Timbang berat utuh setiap telur satu per satu menggunakan timbangan digital, lalu catat hasilnya di tabel catatan manual teman-teman.</p>
                     </div>
                 </div>
 
-                <div class="flex items-start gap-4 bg-white p-5 rounded-xl border border-blue-200 bg-blue-50 shadow-sm relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-blue-500 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">Aksi Utama</div>
-                    <div class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0 mt-1">3</div>
+                <div class="flex items-start gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-xl border border-blue-200 bg-blue-50 shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-blue-500 text-white text-[9px] md:text-[10px] font-bold px-2 py-1 md:px-3 rounded-bl-lg uppercase tracking-wider">Aksi Utama</div>
+                    <div class="bg-blue-600 text-white w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold shrink-0 mt-1">3</div>
                     <div>
-                        <h4 class="font-bold text-lg text-blue-900 mb-2">Pecah dan Ukur (Mulai dari Telur Bebek A)</h4>
+                        <h4 class="font-bold text-base md:text-lg text-blue-900 mb-2">Pecah dan Ukur (Mulai dari Telur Bebek A)</h4>
                         <ul class="list-disc pl-5 space-y-2 text-blue-800">
                             <li>Pecah <strong>Telur Bebek A</strong> di atas piring atau kaca preparat dengan sangat hati-hati. <strong>Jangan sampai merusak/memecahkan isi kuning telurnya!</strong></li>
                             <li>Siapkan alat ukur <strong>jangka sorong</strong>.</li>
@@ -234,18 +239,18 @@
                     </div>
                 </div>
 
-                <div class="flex items-start gap-4 bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
-                    <div class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0 mt-1">4</div>
+                <div class="flex items-start gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <div class="bg-green-600 text-white w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold shrink-0 mt-1">4</div>
                     <div>
-                        <h4 class="font-bold text-lg text-gray-800 mb-2">Lakukan Pengulangan</h4>
+                        <h4 class="font-bold text-base md:text-lg text-gray-800 mb-2">Lakukan Pengulangan</h4>
                         <p class="text-gray-600">Lakukan hal yang sama persis (seperti langkah ke-3) ke <strong>7 telur selanjutnya secara berurutan</strong> (Bebek B, Ayam Ras A, Ayam Ras B, Ayam Kampung A, Ayam Kampung B, Puyuh A, Puyuh B).</p>
                     </div>
                 </div>
 
-                <div class="flex items-start gap-4 bg-white p-5 rounded-xl border border-yellow-300 bg-yellow-50 shadow-sm">
-                    <div class="bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0 mt-1">5</div>
+                <div class="flex items-start gap-3 md:gap-4 bg-white p-4 md:p-5 rounded-xl border border-yellow-300 bg-yellow-50 shadow-sm">
+                    <div class="bg-yellow-500 text-white w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold shrink-0 mt-1">5</div>
                     <div>
-                        <h4 class="font-bold text-lg text-yellow-900 mb-2">Hitung Rata-Rata (Finalisasi)</h4>
+                        <h4 class="font-bold text-base md:text-lg text-yellow-900 mb-2">Hitung Rata-Rata (Finalisasi)</h4>
                         <p class="text-yellow-800">Setelah semua 8 telur selesai dicatat, <strong>hitunglah rata-rata masing-masing pengukuran dan penimbangan dari jenis telur yang sama</strong> (misalnya rata-rata hasil Bebek A ditambah Bebek B lalu dibagi 2). Nilai rata-rata inilah yang nantinya akan disalin dan dimasukkan ke dalam menu <strong>Praktik & Laporan</strong>!</p>
                     </div>
                 </div>
@@ -253,68 +258,68 @@
 
             <!-- Contoh Form Pencatatan Manual -->
             <div class="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden">
-                <div class="bg-gray-800 text-white px-6 py-4">
-                    <h3 class="text-lg font-bold flex items-center gap-2">
+                <div class="bg-gray-800 text-white px-4 py-3 md:px-6 md:py-4">
+                    <h3 class="text-base md:text-lg font-bold flex items-center gap-2">
                         <i class="fas fa-table"></i> Contoh Form Catatan Manual Kelompok
                     </h3>
-                    <p class="text-sm text-gray-300 font-normal mt-1">Buatlah tabel seperti ini di kertas buram/buku catatan kalian agar rapi.</p>
+                    <p class="text-xs md:text-sm text-gray-300 font-normal mt-1">Buatlah tabel seperti ini di kertas buram/buku catatan kalian agar rapi.</p>
                 </div>
                 
                 <div class="overflow-x-auto p-4">
-                    <table class="w-full text-sm text-left border-collapse border border-gray-300">
-                        <thead class="bg-gray-100 text-gray-700 uppercase text-xs">
+                    <table class="w-full text-xs md:text-sm text-left border-collapse border border-gray-300">
+                        <thead class="bg-gray-100 text-gray-700 uppercase text-[10px] md:text-xs">
                             <tr>
-                                <th class="border border-gray-300 p-3">Jenis Telur</th>
-                                <th class="border border-gray-300 p-3">Label</th>
-                                <th class="border border-gray-300 p-3 text-center">Berat Utuh<br>(g)</th>
-                                <th class="border border-gray-300 p-3 text-center">Berat Cangkang<br>(g)</th>
-                                <th class="border border-gray-300 p-3 text-center">Tinggi Kuning<br>(mm)</th>
-                                <th class="border border-gray-300 p-3 text-center">Diameter Kuning<br>(mm)</th>
-                                <th class="border border-gray-300 p-3 text-center">Tinggi Putih Kental<br>(mm)</th>
-                                <th class="border border-gray-300 p-3 text-center">Rata-rata Diameter Putih<br>(mm)</th>
+                                <th class="border border-gray-300 p-2 md:p-3 whitespace-nowrap">Jenis Telur</th>
+                                <th class="border border-gray-300 p-2 md:p-3 text-center">Label</th>
+                                <th class="border border-gray-300 p-2 md:p-3 text-center">Berat Utuh<br>(g)</th>
+                                <th class="border border-gray-300 p-2 md:p-3 text-center">Berat Cangkang<br>(g)</th>
+                                <th class="border border-gray-300 p-2 md:p-3 text-center">Tinggi Kuning<br>(mm)</th>
+                                <th class="border border-gray-300 p-2 md:p-3 text-center">Diameter Kuning<br>(mm)</th>
+                                <th class="border border-gray-300 p-2 md:p-3 text-center">Tinggi Putih Kental<br>(mm)</th>
+                                <th class="border border-gray-300 p-2 md:p-3 text-center">Rata-rata Diameter Putih<br>(mm)</th>
                             </tr>
                         </thead>
                         <tbody>
                             <!-- Contoh Data Bebek -->
                             <tr class="hover:bg-gray-50">
-                                <td class="border border-gray-300 p-3 font-bold" rowspan="3">Bebek</td>
-                                <td class="border border-gray-300 p-3 text-center">A</td>
-                                <td class="border border-gray-300 p-3"></td>
-                                <td class="border border-gray-300 p-3"></td>
-                                <td class="border border-gray-300 p-3"></td>
-                                <td class="border border-gray-300 p-3"></td>
-                                <td class="border border-gray-300 p-3"></td>
-                                <td class="border border-gray-300 p-3"></td>
+                                <td class="border border-gray-300 p-2 md:p-3 font-bold" rowspan="3">Bebek</td>
+                                <td class="border border-gray-300 p-2 md:p-3 text-center">A</td>
+                                <td class="border border-gray-300 p-2 md:p-3"></td>
+                                <td class="border border-gray-300 p-2 md:p-3"></td>
+                                <td class="border border-gray-300 p-2 md:p-3"></td>
+                                <td class="border border-gray-300 p-2 md:p-3"></td>
+                                <td class="border border-gray-300 p-2 md:p-3"></td>
+                                <td class="border border-gray-300 p-2 md:p-3"></td>
                             </tr>
                             <tr class="hover:bg-gray-50">
-                                <td class="border border-gray-300 p-3 text-center">B</td>
-                                <td class="border border-gray-300 p-3"></td>
-                                <td class="border border-gray-300 p-3"></td>
-                                <td class="border border-gray-300 p-3"></td>
-                                <td class="border border-gray-300 p-3"></td>
-                                <td class="border border-gray-300 p-3"></td>
-                                <td class="border border-gray-300 p-3"></td>
+                                <td class="border border-gray-300 p-2 md:p-3 text-center">B</td>
+                                <td class="border border-gray-300 p-2 md:p-3"></td>
+                                <td class="border border-gray-300 p-2 md:p-3"></td>
+                                <td class="border border-gray-300 p-2 md:p-3"></td>
+                                <td class="border border-gray-300 p-2 md:p-3"></td>
+                                <td class="border border-gray-300 p-2 md:p-3"></td>
+                                <td class="border border-gray-300 p-2 md:p-3"></td>
                             </tr>
                             <tr class="bg-green-100 font-bold">
-                                <td class="border border-gray-300 p-3 text-green-800">RATA-RATA</td>
-                                <td class="border border-gray-300 p-3"></td>
-                                <td class="border border-gray-300 p-3"></td>
-                                <td class="border border-gray-300 p-3"></td>
-                                <td class="border border-gray-300 p-3"></td>
-                                <td class="border border-gray-300 p-3"></td>
-                                <td class="border border-gray-300 p-3"></td>
+                                <td class="border border-gray-300 p-2 md:p-3 text-green-800 text-[10px] md:text-sm">RATA-RATA</td>
+                                <td class="border border-gray-300 p-2 md:p-3"></td>
+                                <td class="border border-gray-300 p-2 md:p-3"></td>
+                                <td class="border border-gray-300 p-2 md:p-3"></td>
+                                <td class="border border-gray-300 p-2 md:p-3"></td>
+                                <td class="border border-gray-300 p-2 md:p-3"></td>
+                                <td class="border border-gray-300 p-2 md:p-3"></td>
                             </tr>
 
                             <!-- Lanjutan untuk telur lain (Sebagai panduan visual) -->
                             <tr class="bg-gray-50">
-                                <td class="border border-gray-300 p-3 font-bold" colspan="8">
+                                <td class="border border-gray-300 p-3 font-bold text-center text-gray-500" colspan="8">
                                     <em>... Lanjutkan format yang sama untuk Ayam Ras (A & B), Ayam Kampung (A & B), dan Puyuh (A & B) ...</em>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="bg-gray-50 p-4 border-t text-sm text-gray-600">
+                <div class="bg-gray-50 p-4 border-t text-xs md:text-sm text-gray-600">
                     <i class="fas fa-info-circle text-green-600 mr-1"></i> <strong>Catatan:</strong> Setelah nilai rata-rata (kolom hijau) didapatkan, buka menu tab <strong>"Praktik & Laporan"</strong> dan masukkan data rata-rata tersebut ke dalam aplikasi.
                 </div>
             </div>
@@ -323,12 +328,12 @@
         <!-- ---------------- TAB 3: PRAKTIK & LAPORAN ---------------- -->
         <section id="praktik" class="tab-content">
             
-            <div class="bg-gradient-to-r from-green-700 to-green-600 text-white rounded-2xl p-6 md:p-8 mb-8 shadow-lg">
-                <h2 class="text-3xl font-extrabold mb-3">Kalkulator & Form Laporan</h2>
-                <p class="text-green-50 text-lg leading-relaxed">
+            <div class="bg-gradient-to-r from-green-700 to-green-600 text-white rounded-2xl p-5 md:p-8 mb-8 shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-extrabold mb-2 md:mb-3">Kalkulator & Form Laporan</h2>
+                <p class="text-green-50 text-sm md:text-lg leading-relaxed">
                     Teman-teman, masukkan angka <strong>hasil RATA-RATA</strong> dari pengukuran keempat jenis telur di sini. Sistem cerdas kita akan otomatis menghitung Indeks dan Haugh Unit (HU). 
                     <br><br>
-                    <i class="fas fa-exclamation-circle text-yellow-300 mr-2"></i> Pastikan identitas kelas dan nama dipilih dengan benar sebelum mengirim laporan!
+                    <i class="fas fa-exclamation-circle text-yellow-300 mr-1"></i> Pastikan identitas kelas dan nama dipilih dengan benar sebelum mengirim laporan!
                 </p>
             </div>
 
@@ -336,20 +341,20 @@
             <form id="laporanForm" onsubmit="submitLaporan(event)">
                 
                 <!-- BAGIAN 1: IDENTITAS PRAKTIKAN -->
-                <div class="bg-white rounded-2xl shadow-md border-t-4 border-t-green-600 p-6 md:p-8 mb-10">
-                    <h3 class="text-xl font-bold text-gray-800 border-b-2 border-gray-100 pb-4 mb-6 flex items-center gap-3">
-                        <i class="fas fa-id-badge text-green-600 text-2xl"></i> Identitas Praktikan
+                <div class="bg-white rounded-2xl shadow-md border-t-4 border-t-green-600 p-5 md:p-8 mb-8 md:mb-10">
+                    <h3 class="text-lg md:text-xl font-bold text-gray-800 border-b-2 border-gray-100 pb-3 md:pb-4 mb-5 md:mb-6 flex items-center gap-3">
+                        <i class="fas fa-id-badge text-green-600 text-xl md:text-2xl"></i> Identitas Praktikan
                     </h3>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
                         <!-- Dropdown Pilihan Kelas -->
                         <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">Kelas</label>
+                            <label class="block text-xs md:text-sm font-bold text-gray-700 mb-2">Kelas</label>
                             <select 
                                 id="kelas" 
                                 required 
                                 onchange="populateNama()" 
-                                class="w-full border-gray-300 rounded-xl p-3.5 bg-gray-50 focus:ring-2 focus:ring-green-500 focus:border-green-500 border transition-all cursor-pointer">
+                                class="w-full border-gray-300 rounded-xl p-3 md:p-3.5 bg-gray-50 focus:ring-2 focus:ring-green-500 focus:border-green-500 border transition-all cursor-pointer text-sm">
                                 <option value="">-- Pilih Kelas --</option>
                                 <option value="10 AT 1">10 AT 1</option>
                                 <option value="10 AT 2">10 AT 2</option>
@@ -359,11 +364,11 @@
                         
                         <!-- Dropdown Pilihan Kelompok -->
                         <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">Kelompok</label>
+                            <label class="block text-xs md:text-sm font-bold text-gray-700 mb-2">Kelompok</label>
                             <select 
                                 id="kelompok" 
                                 required 
-                                class="w-full border-gray-300 rounded-xl p-3.5 bg-gray-50 focus:ring-2 focus:ring-green-500 focus:border-green-500 border transition-all cursor-pointer">
+                                class="w-full border-gray-300 rounded-xl p-3 md:p-3.5 bg-gray-50 focus:ring-2 focus:ring-green-500 focus:border-green-500 border transition-all cursor-pointer text-sm">
                                 <option value="">-- Pilih Kelompok --</option>
                                 <option value="1">Kelompok 1</option>
                                 <option value="2">Kelompok 2</option>
@@ -379,9 +384,9 @@
                         
                         <!-- Dropdown Dinamis Nama Praktikan -->
                         <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2 flex items-center justify-between">
+                            <label class="block text-xs md:text-sm font-bold text-gray-700 mb-2 flex items-center justify-between">
                                 <span>Nama Praktikan</span>
-                                <span id="namaLoading" class="text-xs text-green-600 font-normal hidden bg-green-100 px-2 py-1 rounded-md">
+                                <span id="namaLoading" class="text-[10px] md:text-xs text-green-600 font-normal hidden bg-green-100 px-2 py-1 rounded-md">
                                     <i class="fas fa-spinner fa-spin mr-1"></i> Sync DB...
                                 </span>
                             </label>
@@ -389,24 +394,24 @@
                                 id="namaPraktikan" 
                                 required 
                                 disabled 
-                                class="w-full border-gray-300 rounded-xl p-3.5 bg-gray-100 focus:ring-2 focus:ring-green-500 focus:border-green-500 border cursor-not-allowed transition-all">
+                                class="w-full border-gray-300 rounded-xl p-3 md:p-3.5 bg-gray-100 focus:ring-2 focus:ring-green-500 focus:border-green-500 border cursor-not-allowed transition-all text-sm">
                                 <option value="">-- Pilih Kelas Dahulu --</option>
                             </select>
-                            <p class="text-xs text-gray-400 mt-2"><i class="fas fa-info-circle"></i> Nama terhubung ke database otomatis.</p>
+                            <p class="text-[10px] md:text-xs text-gray-400 mt-2"><i class="fas fa-info-circle"></i> Nama terhubung ke database otomatis.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- BAGIAN 2: KONTINER GENERATE FORM 4 TELUR -->
-                <div id="eggFormsContainer" class="space-y-10"></div>
+                <div id="eggFormsContainer" class="space-y-6 md:space-y-10"></div>
 
                 <!-- BAGIAN 3: TOMBOL SUBMIT -->
-                <div class="mt-12 flex justify-end mb-8">
+                <div class="mt-8 md:mt-12 flex justify-end mb-8">
                     <button 
                         type="submit" 
                         id="btnSubmit" 
-                        class="bg-green-600 hover:bg-green-700 text-white font-extrabold py-4 px-10 rounded-2xl shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl flex items-center gap-3 text-xl w-full md:w-auto justify-center">
-                        <i class="fas fa-paper-plane"></i> Kirim Laporan Praktik
+                        class="bg-green-600 hover:bg-green-700 text-white font-extrabold py-3 px-6 md:py-4 md:px-10 rounded-xl md:rounded-2xl shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl flex items-center justify-center gap-2 md:gap-3 text-base md:text-xl w-full md:w-auto">
+                        <i class="fas fa-paper-plane"></i> Kirim Laporan ke Pak Fajar
                     </button>
                 </div>
 
@@ -416,27 +421,27 @@
     </main>
 
     <!-- ==================== FOOTER ==================== -->
-    <footer class="bg-gray-800 text-gray-400 py-6 text-center text-sm mt-auto">
+    <footer class="bg-gray-800 text-gray-400 py-6 text-center text-xs md:text-sm mt-auto">
         <p>&copy; 2026 AgriEdu Pro - Dikembangkan oleh Bapak Fajar S.Pt.</p>
         <p class="mt-1">SMKN 2 Purbalingga - Program Keahlian Agribisnis Ternak</p>
     </footer>
 
     <!-- ==================== CUSTOM MODAL POPUP ==================== -->
-    <div id="customModal" class="fixed inset-0 bg-gray-900 bg-opacity-75 z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-300 backdrop-blur-sm">
-        <div class="bg-white rounded-3xl shadow-2xl max-w-md w-full p-8 transform scale-90 transition-transform duration-300 relative" id="modalContent">
+    <div id="customModal" class="fixed inset-0 bg-gray-900 bg-opacity-75 z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-300 backdrop-blur-sm px-4">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-md w-full p-6 md:p-8 transform scale-90 transition-transform duration-300 relative" id="modalContent">
             
             <button onclick="closeModal()" class="absolute top-4 right-5 text-gray-400 hover:text-gray-600 transition-colors">
                 <i class="fas fa-times text-xl"></i>
             </button>
 
             <div class="text-center mt-2">
-                <div id="modalIcon" class="mx-auto flex items-center justify-center h-20 w-20 rounded-full mb-5 shadow-inner">
+                <div id="modalIcon" class="mx-auto flex items-center justify-center h-16 w-16 md:h-20 md:w-20 rounded-full mb-4 md:mb-5 shadow-inner">
                 </div>
-                <h3 id="modalTitle" class="text-3xl font-extrabold text-gray-900 mb-3"></h3>
-                <p id="modalMessage" class="text-gray-600 mb-8 text-lg leading-relaxed"></p>
+                <h3 id="modalTitle" class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2 md:mb-3"></h3>
+                <p id="modalMessage" class="text-sm md:text-lg text-gray-600 mb-6 md:mb-8 leading-relaxed"></p>
                 <button 
                     onclick="closeModal()" 
-                    class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-4 px-6 rounded-xl transition-colors text-lg shadow-sm border border-gray-200">
+                    class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 md:py-4 px-6 rounded-xl transition-colors text-base md:text-lg shadow-sm border border-gray-200">
                     Oke, Siap!
                 </button>
             </div>
@@ -512,74 +517,74 @@
             eggTypes.forEach(egg => {
                 htmlContent += `
                 <div class="bg-white rounded-2xl shadow-md border-2 border-transparent hover:border-${egg.color}-300 transition-colors overflow-hidden group">
-                    <div class="bg-${egg.color}-50 px-6 py-4 border-b border-${egg.color}-100 flex items-center justify-between">
-                        <h3 class="text-xl font-bold text-${egg.color}-800 flex items-center gap-3">
-                            <span class="bg-${egg.color}-200 p-2 rounded-lg text-${egg.color}-700">
+                    <div class="bg-${egg.color}-50 px-4 md:px-6 py-3 md:py-4 border-b border-${egg.color}-100 flex items-center justify-between">
+                        <h3 class="text-base md:text-xl font-bold text-${egg.color}-800 flex items-center gap-2 md:gap-3">
+                            <span class="bg-${egg.color}-200 p-1.5 md:p-2 rounded-lg text-${egg.color}-700">
                                 <i class="fas ${egg.icon}"></i>
                             </span>
                             ${egg.name}
                         </h3>
                     </div>
                     
-                    <div class="p-6 md:p-8">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    <div class="p-4 md:p-8">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-8">
                             
                             <div>
-                                <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-2">Berat Utuh (gram)</label>
-                                <input type="number" step="0.01" id="${egg.id}_berat" oninput="calculateAll('${egg.id}')" required class="w-full border-gray-300 rounded-xl p-3 pl-4 bg-gray-50 border focus:ring-2 focus:ring-${egg.color}-400 focus:bg-white transition-all" placeholder="Rata-rata Utuh">
+                                <label class="block text-[10px] md:text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5 md:mb-2">Berat Utuh (gram)</label>
+                                <input type="number" step="0.01" id="${egg.id}_berat" oninput="calculateAll('${egg.id}')" required class="w-full border-gray-300 rounded-xl p-2.5 md:p-3 pl-3 md:pl-4 bg-gray-50 border focus:ring-2 focus:ring-${egg.color}-400 focus:bg-white transition-all text-sm" placeholder="Rata-rata Utuh">
                             </div>
                             
                             <div>
-                                <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-2">Berat Cangkang (gram)</label>
-                                <input type="number" step="0.01" id="${egg.id}_cangkang" oninput="calculateAll('${egg.id}')" required class="w-full border-gray-300 rounded-xl p-3 pl-4 bg-gray-50 border focus:ring-2 focus:ring-${egg.color}-400 focus:bg-white transition-all" placeholder="Rata-rata Cangkang">
+                                <label class="block text-[10px] md:text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5 md:mb-2">Berat Cangkang (gram)</label>
+                                <input type="number" step="0.01" id="${egg.id}_cangkang" oninput="calculateAll('${egg.id}')" required class="w-full border-gray-300 rounded-xl p-2.5 md:p-3 pl-3 md:pl-4 bg-gray-50 border focus:ring-2 focus:ring-${egg.color}-400 focus:bg-white transition-all text-sm" placeholder="Rata-rata Cangkang">
                             </div>
                             
                             <div>
-                                <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-2">Tinggi Kuning (mm)</label>
-                                <input type="number" step="0.01" id="${egg.id}_tk" oninput="calculateAll('${egg.id}')" required class="w-full border-gray-300 rounded-xl p-3 pl-4 bg-gray-50 border focus:ring-2 focus:ring-${egg.color}-400 focus:bg-white transition-all" placeholder="Rata-rata TK">
+                                <label class="block text-[10px] md:text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5 md:mb-2">Tinggi Kuning (mm)</label>
+                                <input type="number" step="0.01" id="${egg.id}_tk" oninput="calculateAll('${egg.id}')" required class="w-full border-gray-300 rounded-xl p-2.5 md:p-3 pl-3 md:pl-4 bg-gray-50 border focus:ring-2 focus:ring-${egg.color}-400 focus:bg-white transition-all text-sm" placeholder="Rata-rata TK">
                             </div>
                             
                             <div>
-                                <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-2">Diameter Kuning (mm)</label>
-                                <input type="number" step="0.01" id="${egg.id}_dk" oninput="calculateAll('${egg.id}')" required class="w-full border-gray-300 rounded-xl p-3 pl-4 bg-gray-50 border focus:ring-2 focus:ring-${egg.color}-400 focus:bg-white transition-all" placeholder="Rata-rata DK">
+                                <label class="block text-[10px] md:text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5 md:mb-2">Diameter Kuning (mm)</label>
+                                <input type="number" step="0.01" id="${egg.id}_dk" oninput="calculateAll('${egg.id}')" required class="w-full border-gray-300 rounded-xl p-2.5 md:p-3 pl-3 md:pl-4 bg-gray-50 border focus:ring-2 focus:ring-${egg.color}-400 focus:bg-white transition-all text-sm" placeholder="Rata-rata DK">
                             </div>
                             
                             <div>
-                                <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-2">Tinggi Putih Kental (mm)</label>
-                                <input type="number" step="0.01" id="${egg.id}_tp" oninput="calculateAll('${egg.id}')" required class="w-full border-gray-300 rounded-xl p-3 pl-4 bg-gray-50 border focus:ring-2 focus:ring-${egg.color}-400 focus:bg-white transition-all" placeholder="Rata-rata TP">
+                                <label class="block text-[10px] md:text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5 md:mb-2">Tinggi Putih Kental (mm)</label>
+                                <input type="number" step="0.01" id="${egg.id}_tp" oninput="calculateAll('${egg.id}')" required class="w-full border-gray-300 rounded-xl p-2.5 md:p-3 pl-3 md:pl-4 bg-gray-50 border focus:ring-2 focus:ring-${egg.color}-400 focus:bg-white transition-all text-sm" placeholder="Rata-rata TP">
                             </div>
                             
                             <div>
-                                <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-2">Diameter Putih (mm)</label>
-                                <input type="number" step="0.01" id="${egg.id}_dp" oninput="calculateAll('${egg.id}')" required class="w-full border-gray-300 rounded-xl p-3 pl-4 bg-gray-50 border focus:ring-2 focus:ring-${egg.color}-400 focus:bg-white transition-all" placeholder="Rata-rata DP">
+                                <label class="block text-[10px] md:text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5 md:mb-2">Diameter Putih (mm)</label>
+                                <input type="number" step="0.01" id="${egg.id}_dp" oninput="calculateAll('${egg.id}')" required class="w-full border-gray-300 rounded-xl p-2.5 md:p-3 pl-3 md:pl-4 bg-gray-50 border focus:ring-2 focus:ring-${egg.color}-400 focus:bg-white transition-all text-sm" placeholder="Rata-rata DP">
                             </div>
                             
                         </div>
 
-                        <div class="bg-gray-50 rounded-xl p-6 border border-dashed border-gray-300 group-hover:bg-${egg.color}-50 transition-colors">
-                            <h4 class="text-sm font-bold text-gray-700 mb-5 uppercase tracking-wider flex items-center">
-                                <i class="fas fa-robot text-${egg.color}-500 mr-2 text-lg"></i> Mesin Hitung Otomatis
+                        <div class="bg-gray-50 rounded-xl p-4 md:p-6 border border-dashed border-gray-300 group-hover:bg-${egg.color}-50 transition-colors">
+                            <h4 class="text-xs md:text-sm font-bold text-gray-700 mb-4 md:mb-5 uppercase tracking-wider flex items-center">
+                                <i class="fas fa-robot text-${egg.color}-500 mr-2 text-base md:text-lg"></i> Mesin Hitung Otomatis
                             </h4>
-                            <div class="grid grid-cols-2 md:grid-cols-5 gap-5">
+                            <div class="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-5">
                                 <div>
-                                    <label class="block text-[10px] font-bold text-gray-500 mb-2 uppercase tracking-wide">Persentase Cangkang</label>
-                                    <input type="text" id="${egg.id}_resCangkang" readonly class="w-full bg-white border border-gray-200 text-gray-800 font-bold rounded-lg p-3 text-center shadow-sm" placeholder="-">
+                                    <label class="block text-[9px] md:text-[10px] font-bold text-gray-500 mb-1.5 uppercase tracking-wide">Persentase Cangkang</label>
+                                    <input type="text" id="${egg.id}_resCangkang" readonly class="w-full bg-white border border-gray-200 text-gray-800 font-bold rounded-lg p-2 md:p-3 text-center shadow-sm text-sm" placeholder="-">
                                 </div>
                                 <div>
-                                    <label class="block text-[10px] font-bold text-gray-500 mb-2 uppercase tracking-wide">Indeks Kuning (IK)</label>
-                                    <input type="text" id="${egg.id}_resIK" readonly class="w-full bg-white border border-gray-200 text-gray-800 font-bold rounded-lg p-3 text-center shadow-sm" placeholder="-">
+                                    <label class="block text-[9px] md:text-[10px] font-bold text-gray-500 mb-1.5 uppercase tracking-wide">Indeks Kuning (IK)</label>
+                                    <input type="text" id="${egg.id}_resIK" readonly class="w-full bg-white border border-gray-200 text-gray-800 font-bold rounded-lg p-2 md:p-3 text-center shadow-sm text-sm" placeholder="-">
                                 </div>
                                 <div>
-                                    <label class="block text-[10px] font-bold text-gray-500 mb-2 uppercase tracking-wide">Indeks Putih (IP)</label>
-                                    <input type="text" id="${egg.id}_resIP" readonly class="w-full bg-white border border-gray-200 text-gray-800 font-bold rounded-lg p-3 text-center shadow-sm" placeholder="-">
+                                    <label class="block text-[9px] md:text-[10px] font-bold text-gray-500 mb-1.5 uppercase tracking-wide">Indeks Putih (IP)</label>
+                                    <input type="text" id="${egg.id}_resIP" readonly class="w-full bg-white border border-gray-200 text-gray-800 font-bold rounded-lg p-2 md:p-3 text-center shadow-sm text-sm" placeholder="-">
                                 </div>
-                                <div>
-                                    <label class="block text-[10px] font-bold text-gray-500 mb-2 uppercase tracking-wide">Haugh Unit (HU)</label>
-                                    <input type="text" id="${egg.id}_resHU" readonly class="w-full bg-green-100 border border-green-300 text-green-800 font-black rounded-lg p-3 text-center shadow-sm text-lg" placeholder="-">
+                                <div class="col-span-2 md:col-span-1">
+                                    <label class="block text-[9px] md:text-[10px] font-bold text-gray-500 mb-1.5 uppercase tracking-wide">Haugh Unit (HU)</label>
+                                    <input type="text" id="${egg.id}_resHU" readonly class="w-full bg-green-100 border border-green-300 text-green-800 font-black rounded-lg p-2 md:p-3 text-center shadow-sm text-base md:text-lg" placeholder="-">
                                 </div>
-                                <div>
-                                    <label class="block text-[10px] font-bold text-gray-500 mb-2 uppercase tracking-wide">Kesimpulan Kualitas</label>
-                                    <input type="text" id="${egg.id}_resGrade" readonly class="w-full bg-gray-100 border border-gray-200 text-gray-600 font-bold rounded-lg p-3 text-center shadow-sm text-xs" placeholder="-">
+                                <div class="col-span-2 md:col-span-1">
+                                    <label class="block text-[9px] md:text-[10px] font-bold text-gray-500 mb-1.5 uppercase tracking-wide">Kesimpulan Kualitas</label>
+                                    <input type="text" id="${egg.id}_resGrade" readonly class="w-full bg-gray-100 border border-gray-200 text-gray-600 font-bold rounded-lg p-2 md:p-3 text-center shadow-sm text-xs md:text-sm" placeholder="-">
                                 </div>
                             </div>
                         </div>
@@ -623,21 +628,21 @@
 
                 if (finalHU >= 72) {
                     elGrade.value = "Grade AA (Sangat Baik)";
-                    elGrade.className = "w-full bg-green-100 border border-green-400 text-green-800 font-extrabold rounded-lg p-3 text-center text-xs shadow-sm";
+                    elGrade.className = "w-full bg-green-100 border border-green-400 text-green-800 font-extrabold rounded-lg p-2 md:p-3 text-center text-[10px] md:text-xs shadow-sm";
                 } else if (finalHU >= 60) {
                     elGrade.value = "Grade A (Baik)";
-                    elGrade.className = "w-full bg-blue-100 border border-blue-400 text-blue-800 font-extrabold rounded-lg p-3 text-center text-xs shadow-sm";
+                    elGrade.className = "w-full bg-blue-100 border border-blue-400 text-blue-800 font-extrabold rounded-lg p-2 md:p-3 text-center text-[10px] md:text-xs shadow-sm";
                 } else if (finalHU >= 31) {
                     elGrade.value = "Grade B (Cukup)";
-                    elGrade.className = "w-full bg-yellow-100 border border-yellow-400 text-yellow-800 font-extrabold rounded-lg p-3 text-center text-xs shadow-sm";
+                    elGrade.className = "w-full bg-yellow-100 border border-yellow-400 text-yellow-800 font-extrabold rounded-lg p-2 md:p-3 text-center text-[10px] md:text-xs shadow-sm";
                 } else {
                     elGrade.value = "Grade C (Kurang)";
-                    elGrade.className = "w-full bg-red-100 border border-red-400 text-red-800 font-extrabold rounded-lg p-3 text-center text-xs shadow-sm";
+                    elGrade.className = "w-full bg-red-100 border border-red-400 text-red-800 font-extrabold rounded-lg p-2 md:p-3 text-center text-[10px] md:text-xs shadow-sm";
                 }
             } else {
                 elHU.value = "-";
                 elGrade.value = "-";
-                elGrade.className = "w-full bg-gray-100 border border-gray-200 text-gray-600 font-bold rounded-lg p-3 text-center text-xs shadow-sm";
+                elGrade.className = "w-full bg-gray-100 border border-gray-200 text-gray-600 font-bold rounded-lg p-2 md:p-3 text-center text-[10px] md:text-xs shadow-sm";
             }
         }
 
@@ -647,7 +652,7 @@
             const btn = document.getElementById('btnSubmit');
             const originalBtnText = btn.innerHTML;
             
-            btn.innerHTML = '<span class="loader mr-3"></span> Sedang Menyimpan Data...';
+            btn.innerHTML = '<span class="loader mr-2 md:mr-3"></span> Sedang Menyimpan...';
             btn.disabled = true;
             btn.classList.add('opacity-75', 'cursor-wait');
             btn.classList.remove('hover:-translate-y-1', 'hover:shadow-2xl');
@@ -733,10 +738,10 @@
             document.getElementById('modalMessage').innerHTML = message;
             
             if (type === 'success') {
-                icon.className = "mx-auto flex items-center justify-center h-20 w-20 rounded-full bg-green-100 mb-5 text-green-500 text-4xl shadow-inner border-4 border-white";
+                icon.className = "mx-auto flex items-center justify-center h-16 w-16 md:h-20 md:w-20 rounded-full bg-green-100 mb-4 md:mb-5 text-green-500 text-3xl md:text-4xl shadow-inner border-4 border-white";
                 icon.innerHTML = '<i class="fas fa-check"></i>';
             } else {
-                icon.className = "mx-auto flex items-center justify-center h-20 w-20 rounded-full bg-red-100 mb-5 text-red-500 text-4xl shadow-inner border-4 border-white";
+                icon.className = "mx-auto flex items-center justify-center h-16 w-16 md:h-20 md:w-20 rounded-full bg-red-100 mb-4 md:mb-5 text-red-500 text-3xl md:text-4xl shadow-inner border-4 border-white";
                 icon.innerHTML = '<i class="fas fa-times"></i>';
             }
 
